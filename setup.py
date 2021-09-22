@@ -13,8 +13,7 @@ with open("HISTORY.md") as history_file:
     history = history_file.read()
 
 with open("requirements.txt") as requirements_file:
-    regex = re.compile(r"(.+==[0-9]+\.[0-9]+\.[0-9]+)")
-    requirements = regex.findall(requirements_file.read())
+    requirements = requirements_file.read()
 
 setup_requirements = ["pytest-runner"]
 
@@ -22,7 +21,7 @@ test_requirements = ["pytest"]
 
 setup(
     name="pan-cortex-data-lake",
-    version="2.0.0-a14",
+    version="2.0.0-a14-armis",
     description="Python idiomatic SDK for Cortex™ Data Lake.",
     long_description=readme + "\n\n" + history,
     long_description_content_type="text/markdown",
